@@ -1,5 +1,4 @@
 export class Pedido {
-<<<<<<< HEAD
     constructor(
         public endereco: string,
         public numero: string,
@@ -12,10 +11,3 @@ export class Pedido {
 
 
 
-=======
-    endereco: string
-	numero: string
-	complemento: string
-	formaPagamento: string
-}
->>>>>>> 8f5292f1d345f8336049581a4ca06c5cda5511d2

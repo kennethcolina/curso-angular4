@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { HttpModule } from '@angular/http'
 import { RouterModule } from '@angular/router'
+//import { FormsModule } from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms'
 
 import { ROUTES } from './app.routes'
 
@@ -18,40 +20,33 @@ import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
 
 import { DescricaoReduzida } from './util/descricao-reduzida.pipe';
-<<<<<<< HEAD
 import { OrdemCompraComponent } from './ordem-compra/ordem-compra.component';
 import { OrdemCompraSucessoComponent } from './ordem-compra-sucesso/ordem-compra-sucesso.component'
-=======
-import { OrdemCompraComponent } from './ordem-compra/ordem-compra.component'
->>>>>>> 8f5292f1d345f8336049581a4ca06c5cda5511d2
 
 registerLocaleData(localePt, 'pt');
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    TopoComponent,
-    HomeComponent,
-    RodapeComponent,
-    RestaurantesComponent,
-    DiversaoComponent,
-    OfertaComponent,
-    ComoUsarComponent,
-    OndeFicaComponent,
-    DescricaoReduzida,
-<<<<<<< HEAD
-    OrdemCompraComponent,
-    OrdemCompraSucessoComponent
-=======
-    OrdemCompraComponent
->>>>>>> 8f5292f1d345f8336049581a4ca06c5cda5511d2
-  ],
-  imports: [
-    BrowserModule,
-    HttpModule,
-    RouterModule.forRoot(ROUTES)
-  ],
-  providers: [ { provide: LOCALE_ID, useValue: 'pt' } ],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		TopoComponent,
+		HomeComponent,
+		RodapeComponent,
+		RestaurantesComponent,
+		DiversaoComponent,
+		OfertaComponent,
+		ComoUsarComponent,
+		OndeFicaComponent,
+		DescricaoReduzida,
+		OrdemCompraComponent,
+		OrdemCompraSucessoComponent
+	],
+	imports: [
+		BrowserModule,
+		HttpModule,
+		ReactiveFormsModule,
+		RouterModule.forRoot(ROUTES)
+	],
+	providers: [ { provide: LOCALE_ID, useValue: 'pt' } ],
+	bootstrap: [AppComponent]
 })
 export class AppModule { }

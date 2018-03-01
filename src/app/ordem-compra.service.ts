@@ -8,18 +8,18 @@ import 'rxjs/add/operator/map'
 @Injectable()
 export class OrdemCompraService {
 
-    constructor(private http: Http, private headers: Headers) {
+    constructor(private http: Http) {
 
     }
 
-    efetivarCompra(pedido: Pedido): Observable<any> {
+    efetivarCompra(pedido: Pedido): Observable<number> {
 
         let headers = new Headers()
-        headers.append('Content-Type', 'application/json')
+        headers.append('Content-type', 'application/json')
 
-        return this.http.post(`${URL_API}oderm-compra`,
-            JSON.stringify(pedido), { headers: this.headers })
-            .map((resposta: Response) => resposta.json() )
+        return this.http.post(`${URL_API}pedidos`,
+            JSON.stringify(pedido), { headers: headers })
+            .map((resposta: Response) => resposta.json().id )
     }
 
 }
