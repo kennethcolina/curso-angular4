@@ -1,7 +1,12 @@
 <div class="container">
   <div class="ordem-compra">
+<<<<<<< HEAD
     <form>
     
+=======
+    <form novalidate>
+
+>>>>>>> 8f5292f1d345f8336049581a4ca06c5cda5511d2
       <h5>Sua Compra</h5>
       <hr />
 
@@ -29,7 +34,11 @@
           29.90
         </div>
       </div>
+<<<<<<< HEAD
       
+=======
+
+>>>>>>> 8f5292f1d345f8336049581a4ca06c5cda5511d2
       <div class="form-row" style="background: #FAFAFA; padding: 20px; border-bottom: solid 1px #F0F0F0">
         <div class="form-group col-sm-1">
           <img src="/assets/ofertas/4/img1.jpg" class="img-fluid">
@@ -54,7 +63,11 @@
           31.90
         </div>
       </div>
+<<<<<<< HEAD
       
+=======
+
+>>>>>>> 8f5292f1d345f8336049581a4ca06c5cda5511d2
       <div class="form-row">
         <div class="form-group col d-flex justify-content-end">
           <h4>Total do pedido: 61.80</h4>
@@ -69,18 +82,43 @@
       <div class="form-row">
 
         <div class="form-group col-md-6">
+<<<<<<< HEAD
           <input type="text" class="form-control is-invalid" placeholder="Endereço" autocomplete="off" minlength="5" required>
+=======
+          <input type="text" class="form-control is-invalid"
+          #inputEndereco
+          [value]="endereco"
+          (input)="atualizaEndereco(inputEndereco.value)"
+          placeholder="Endereço"
+          autocomplete="off"
+          minlength="5" required>
+>>>>>>> 8f5292f1d345f8336049581a4ca06c5cda5511d2
           <div class="invalid-feedback">Endereço inválido</div>
         </div>
 
         <div class="form-group col-md-2">
+<<<<<<< HEAD
           <input type="text" class="form-control is-valid" placeholder="Número" autocomplete="off" minlength="1" required>
           <br />
+=======
+          <input type="text" class="form-control is-valid"
+          #inputNumero
+          [value]="numero"
+          (input)="atualizaNumero(inputNumero.value)"
+           placeholder="Número" autocomplete="off" minlength="1" required>
+>>>>>>> 8f5292f1d345f8336049581a4ca06c5cda5511d2
           <small class="form-text text-muted">Ok</small>
         </div>
 
         <div class="form-group col-md-4">
+<<<<<<< HEAD
           <input type="text" class="form-control" placeholder="Complemento" autocomplete="off">
+=======
+          <input type="text" class="form-control"
+          #inputComplemento
+          [value]="complemento"
+          (input)="atualizaComplemento(inputComplemento.value)" placeholder="Complemento" autocomplete="off">
+>>>>>>> 8f5292f1d345f8336049581a4ca06c5cda5511d2
         </div>
 
       </div>
@@ -90,12 +128,25 @@
       <hr />
 
       <div class="form-row">
+<<<<<<< HEAD
           
         <div class="form-group col-md-3">
           <select class="form-control is-invalid">
             <option>Selecione uma opção</option>
             <option>Dinheiro</option>
             <option>Débito</option>
+=======
+
+        <div class="form-group col-md-3">
+          <select
+            class="form-control is-invalid"
+            #selectFormaPagamento
+            (change)="atualizaFormaPagamento(selectFormaPagamento.value)"
+          >
+            <option value="">Selecione uma opção</option>
+            <option value="dinheiro" selected="{{ formaPagamento == 'dinheiro' ? selected : '' }}">Dinheiro</option>
+            <option value="debito" selected="{{ formaPagamento == 'debito' ? selected : '' }}">Débito</option>
+>>>>>>> 8f5292f1d345f8336049581a4ca06c5cda5511d2
           </select>
 
           <div class="invalid-feedback">Selecione uma forma de pagamento</div>
