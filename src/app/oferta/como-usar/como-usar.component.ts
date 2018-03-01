@@ -19,7 +19,6 @@ export class ComoUsarComponent implements OnInit {
 			.then((resposta: string) =>
 				this.comoUsar = resposta),
 				erro => console.log(erro)
-
 		})
 
 	}
