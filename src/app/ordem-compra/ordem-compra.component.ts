@@ -11,6 +11,8 @@ import 'rxjs/observable'
 })
 export class OrdemCompraComponent implements OnInit {
 
+    idPedidoCompra: number
+
 	endereco: string = ''
 	numero: string = ''
 	complemento: string = ''
@@ -45,8 +47,12 @@ export class OrdemCompraComponent implements OnInit {
 
 		let pedido = new Pedido(this.endereco, this.numero, this.complemento, this.formaPagamento)
 
-		this.ordemCompraService.efetivarCompra(pedido)
-			.subscribe()
+        this.ordemCompraService.efetivarCompra(pedido)
+            .subscribe((resposta: Response) => {
+                //this.idPedidoCompra = resposta.body.
+                console.log(resposta)
+            } )
+
 
 	}
 
